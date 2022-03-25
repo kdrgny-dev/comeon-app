@@ -1,0 +1,20 @@
+//Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+//Colors
+$primary: #8eb50c;
+$secondary: #b8bfc6;
+$black : #000;
+$white : #fff;
+
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100%;
+  background-color: $secondary;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: 100%;
+  background-color: $secondary;
+}
