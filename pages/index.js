@@ -139,8 +139,8 @@ export default function Home({ games, categories }) {
 
 export async function getStaticProps() {
   const [gamesRes, categoriesRes] = await Promise.all([
-    fetch(`http://localhost:3001/games`, { method: 'get' }),
-    fetch(`http://localhost:3001/categories`, { method: 'get' })
+    fetch(`https://my-json-server.typicode.com/kdrgny-dev/json-server-github/games`, { method: 'get' }),
+    fetch(`https://my-json-server.typicode.com/kdrgny-dev/json-server-github/categories`, { method: 'get' })
   ]);
   const [games, categories] = await Promise.all([
     gamesRes.json(),

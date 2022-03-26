@@ -52,7 +52,7 @@ function Game({games}) {
 export default Game
 
 export async function getStaticPaths() {
-  const response = await fetch('http://localhost:3001/games')
+  const response = await fetch('https://my-json-server.typicode.com/kdrgny-dev/json-server-github/games')
   const games = await response.json()
   const paths = games.map(game => `/game/${game.code}`)
   return {
@@ -63,7 +63,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps() {
   const [gamesRes] = await Promise.all([
-    fetch(`http://localhost:3001/games`, { method: 'get' }),
+    fetch(`https://my-json-server.typicode.com/kdrgny-dev/json-server-github/games`, { method: 'get' }),
   ]);
   const [games] = await Promise.all([
     gamesRes.json(),
