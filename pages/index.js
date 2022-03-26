@@ -102,27 +102,20 @@ export default function Home({ games, categories }) {
         <meta name="description" content="comeon group javascript case" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Script type="text/javascript" src="/lib/comeon.game-1.0.min.js"></Script>
+      
 
       {login && (
         <main>
-          <div className="wrapper pb-5">
-            <div className="container">
-              <div className="row">
-                <div className="col">
-                  <img src="/logo.svg" alt="We Are ComeOn" />
-                </div>
+          <div className="container pb-5">
+            <Header player={player} handleLogOut={handleLogOut} setSearchText={setSearchText} />
+            <div className="row bg-white">
+              <div className="col-md-9 col-sm-12 order-1 order-lg-0 order-md-0 mt-3 mt-lg-0">
+                <h2 className='pb-2 border-bottom'>Games</h2>
+                <Games games={filteredGames} />
               </div>
-              <Header player={player} handleLogOut={handleLogOut} setSearchText={setSearchText} />
-              <div className="row bg-white">
-                <div className="col-md-9 col-sm-12 order-1 order-lg-0">
-                  <h2 className='pb-2 border-bottom'>Games</h2>
-                  <Games games={filteredGames} />
-                </div>
-                <div className="col-md-3 col-sm-12">
-                  <h2 className='pb-2 border-bottom'>Categories</h2>
-                  <Categories categories={categories} setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} />
-                </div>
+              <div className="col-md-3 col-sm-12 mt-3 mt-lg-0">
+                <h2 className='pb-2 border-bottom'>Categories</h2>
+                <Categories categories={categories} setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} />
               </div>
             </div>
           </div>
@@ -130,7 +123,7 @@ export default function Home({ games, categories }) {
       )}
 
       {!login && (
-        <div className="wrapper vh-100">
+        <div className="vh-100 d-flex align-items-center">
           <div className='container'>
             <div className="row">
               <div className="col align-items-center justify-content-center">
@@ -144,7 +137,7 @@ export default function Home({ games, categories }) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const [gamesRes, categoriesRes] = await Promise.all([
     fetch(`http://localhost:3001/games`, { method: 'get' }),
     fetch(`http://localhost:3001/categories`, { method: 'get' })

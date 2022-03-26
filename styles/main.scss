@@ -5,3 +5,11 @@
 @import "./components/_header";
 @import "./components/_login";
 @import "./components/_button";
+@import "./components/_categories";
+@import './components/_games';
+
+// Import Animations
+@import './_animations';
+
+// Import Pages
+@import './pages/_game-detail';

@@ -1,0 +1,18 @@
+.categories {
+  .list-group-item.active {
+    background-color: $primary;
+    border-color: $primary;
+    &:hover {
+      background-color: $primary;
+    border-color: $primary;
+    }
+  }
+  .list-group-item-action {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: $secondary;
+      border-color: $secondary;
+      color:$white
+    }
+  }
+}

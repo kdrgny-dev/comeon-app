@@ -9,7 +9,7 @@ function Categories({ categories, setSelectedCategory, selectedCategory }) {
   }
 
   return (
-    <>
+    <div className='categories'>
       <ul className='list-group'>
         {categories.map(category => (
           <li
@@ -23,7 +23,7 @@ function Categories({ categories, setSelectedCategory, selectedCategory }) {
         ))}
       </ul>
       
-    </>
+    </div>
   )
 }
 
