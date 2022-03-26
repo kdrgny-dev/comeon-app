@@ -32,7 +32,7 @@ function Login({ handleLogin, errorText, isSubmit }) {
 
 Login.propTypes = {
   handleLogin: PropTypes.func,
-  errorText: PropTypes.string,
+  errorText: PropTypes.bool,
   isSubmit: PropTypes.bool
 }
 

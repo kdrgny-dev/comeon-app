@@ -11,7 +11,7 @@ function Search({ setSearchText }) {
   )
 }
 
-Search.PropTypes = {
+Search.propTypes = {
   setSearchText: PropTypes.func
 }
 
