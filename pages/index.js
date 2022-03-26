@@ -45,7 +45,7 @@ export default function Home({ games, categories }) {
     const formData = new FormData(event.currentTarget);
     event.preventDefault();
 
-    const response = await fetch('http://localhost:3001/login', {
+    const response = await fetch('https://json-server-comeon.herokuapp.com/login', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
@@ -74,7 +74,7 @@ export default function Home({ games, categories }) {
   }
 
   async function handleLogOut() {
-    const response = await fetch('http://localhost:3001/logout', {
+    const response = await fetch('https://json-server-comeon.herokuapp.com/logout', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
