@@ -9,7 +9,7 @@ function Categories({ categories, setSelectedCategory, selectedCategory }) {
   }
 
   return (
-    <div className='categories'>
+    <div className='categories mb-5'>
       <ul className='list-group'>
         {categories.map(category => (
           <li

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head'
-import Script from 'next/script';
 import Login from '../components/Login';
 import Header from '../components/Header';
 import Games from '../components/Games';
@@ -111,7 +110,7 @@ export default function Home({ games, categories }) {
             <div className="row bg-white">
               <div className="col-md-9 col-sm-12 order-1 order-lg-0 order-md-0 mt-3 mt-lg-0">
                 <h2 className='pb-2 border-bottom'>Games</h2>
-                <Games games={filteredGames} />
+                {filteredGames.length > 0 ? <Games games={filteredGames} /> : <h3 className='text-center mt-5'>No games found</h3>}
               </div>
               <div className="col-md-3 col-sm-12 mt-3 mt-lg-0">
                 <h2 className='pb-2 border-bottom'>Categories</h2>
