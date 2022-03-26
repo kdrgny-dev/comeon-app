@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 import Button from './Button'
 
 function Login({ handleLogin, errorText, isSubmit }) {
@@ -28,6 +28,12 @@ function Login({ handleLogin, errorText, isSubmit }) {
       </form>
     </div>
   )
+}
+
+Login.propTypes = {
+  handleLogin: PropTypes.func,
+  errorText: PropTypes.string,
+  isSubmit: PropTypes.bool
 }
 
 export default Login

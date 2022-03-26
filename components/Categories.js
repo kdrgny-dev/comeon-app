@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
 function Categories({ categories, setSelectedCategory, selectedCategory }) {
   const [active, setActive] = useState(selectedCategory)
@@ -25,6 +26,12 @@ function Categories({ categories, setSelectedCategory, selectedCategory }) {
       
     </div>
   )
+}
+
+Categories.propTypes = {
+  categories: PropTypes.array,
+  setSelectedCategory: PropTypes.func,
+  selectedCategory: PropTypes.number,
 }
 
 export default Categories

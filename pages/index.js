@@ -109,11 +109,11 @@ export default function Home({ games, categories }) {
             <Header player={player} handleLogOut={handleLogOut} setSearchText={setSearchText} />
             <div className="row bg-white">
               <div className="col-md-9 col-sm-12 order-1 order-lg-0 order-md-0 mt-3 mt-lg-0">
-                <h2 className='pb-2 border-bottom'>Games</h2>
+                <h3 className='pb-2 border-bottom'>Games</h3>
                 {filteredGames.length > 0 ? <Games games={filteredGames} /> : <h3 className='text-center mt-5'>No games found</h3>}
               </div>
               <div className="col-md-3 col-sm-12 mt-3 mt-lg-0">
-                <h2 className='pb-2 border-bottom'>Categories</h2>
+                <h3 className='pb-2 border-bottom'>Categories</h3>
                 <Categories categories={categories} setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} />
               </div>
             </div>

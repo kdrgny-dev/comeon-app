@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 
 function Search({ setSearchText }) {
   return (
@@ -9,6 +9,10 @@ function Search({ setSearchText }) {
       className='form-control float-start float-lg-end mt-3 mt-lg-0'
     />
   )
+}
+
+Search.PropTypes = {
+  setSearchText: PropTypes.func
 }
 
 export default Search

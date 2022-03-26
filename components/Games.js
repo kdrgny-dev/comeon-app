@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import PropTypes from 'prop-types'
 
 function Games({ games }) {
   return (
@@ -21,6 +22,10 @@ function Games({ games }) {
       }
     </div>
   )
+}
+
+Games.propTypes = {
+  games: PropTypes.array.isRequired
 }
 
 export default Games

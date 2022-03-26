@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 import Button from './Button'
 
 function Profile({ player, handleLogOut }) {
@@ -18,6 +18,11 @@ function Profile({ player, handleLogOut }) {
       </div>
     </>
   )
+}
+
+Profile.propTypes = {
+  player: PropTypes.object,
+  handleLogOut: PropTypes.func
 }
 
 export default Profile

@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 import Profile from './Profile'
 import Search from './Search'
 
@@ -16,6 +16,12 @@ function Header({ player, handleLogOut, setSearchText}) {
       </div>
     </header>
   )
+}
+
+Header.propTypes = {
+  player: PropTypes.object,
+  handleLogOut: PropTypes.func,
+  setSearchText: PropTypes.func
 }
 
 export default Header
